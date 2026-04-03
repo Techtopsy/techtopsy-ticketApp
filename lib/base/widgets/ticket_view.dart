@@ -5,11 +5,13 @@ import 'package:code_along/base/widgets/big_circle.dart';
 import 'package:code_along/base/widgets/big_dot.dart';
 import 'package:code_along/base/widgets/text_style_fourth.dart';
 import 'package:code_along/base/widgets/text_style_third.dart';
+
 import 'package:flutter/material.dart';
+
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
   final bool wholeScreen;
-  const TicketView({super.key, required this.ticket, this.wholeScreen=false});
+  const TicketView({super.key, required this.ticket, this.wholeScreen = false});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: 189,
       child: Container(
-        margin: EdgeInsets.only(right: wholeScreen==true?0:16),
+        margin: EdgeInsets.only(right: wholeScreen ? 0 : 16),
         child: Column(
           children: [
             //blue part of the ticket
@@ -37,7 +39,7 @@ class TicketView extends StatelessWidget {
                   //show departure and destination with Icons first line
                   Row(
                     children: [
-                      TextStyleThird(text: ticket["from"]["code"],),
+                      TextStyleThird(text: ticket["from"]["code"]),
                       Expanded(child: Container()),
                       BigDot(),
                       Expanded(
@@ -72,7 +74,7 @@ class TicketView extends StatelessWidget {
                         child: TextStyleFourth(text: ticket["from"]["name"]),
                       ),
                       Expanded(child: Container()),
-                      TextStyleFourth(text: ticket["flying_time"],),
+                      TextStyleFourth(text: ticket["flying_time"]),
                       Expanded(child: Container()),
                       SizedBox(
                         width: 100,
@@ -127,7 +129,7 @@ class TicketView extends StatelessWidget {
                         alignment: CrossAxisAlignment.center,
                       ),
                       AppColumnTextLayout(
-                        topText: ticket["Number"].toString(45),
+                        topText: ticket["Number"].toString(),
                         bottomText: "Number",
                         alignment: CrossAxisAlignment.end,
                       ),

@@ -1,4 +1,3 @@
-
 List<Map<String, dynamic>> ticketList = [
   {
     'from' :{
@@ -83,3 +82,4 @@ List<Map<String, dynamic>> ticketList = [
     "number":55
     },
 ];
+

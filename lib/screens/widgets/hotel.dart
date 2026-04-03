@@ -9,18 +9,22 @@ class Hotel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+
+
     return Container(
+      padding: EdgeInsets.all(18),
       width: size.width *0.6,
       height: 350,
-      color: Colors.red.shade200,
+      //color: Colors.red.shade200,
       decoration: BoxDecoration(
         color: AppStyles.primaryColor,
-        borderRadius:BorderRadius.circular(24)
+        borderRadius:BorderRadius.circular(18)
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            height: 180,
            decoration: BoxDecoration(
         color: AppStyles.primaryColor,
         borderRadius:BorderRadius.circular(12),
