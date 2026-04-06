@@ -21,8 +21,9 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: 189,
       child: Container(
-        margin: EdgeInsets.only(right: wholeScreen ? 0 : 16),
+        margin: EdgeInsets.only(right: wholeScreen==true? 0:16),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             //blue part of the ticket
             Container(
@@ -63,7 +64,7 @@ class TicketView extends StatelessWidget {
                       ),
                       BigDot(),
                       Expanded(child: Container()),
-                      TextStyleThird(text: ticket["to"]["code"]),
+                      TextStyleThird(text: ticket["to"]["code"],),
                     ],
                   ),
                   //show departure and destination names with time
@@ -71,10 +72,10 @@ class TicketView extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 100,
-                        child: TextStyleFourth(text: ticket["from"]["name"]),
+                        child: TextStyleFourth(text: ticket["from"]["name"],),
                       ),
                       Expanded(child: Container()),
-                      TextStyleFourth(text: ticket["flying_time"]),
+                      TextStyleFourth(text: ticket["flying_time"],),
                       Expanded(child: Container()),
                       SizedBox(
                         width: 100,
@@ -129,7 +130,7 @@ class TicketView extends StatelessWidget {
                         alignment: CrossAxisAlignment.center,
                       ),
                       AppColumnTextLayout(
-                        topText: ticket["Number"].toString(),
+                        topText: ticket["number"].toString(),
                         bottomText: "Number",
                         alignment: CrossAxisAlignment.end,
                       ),

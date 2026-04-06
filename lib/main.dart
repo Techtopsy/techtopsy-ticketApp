@@ -1,5 +1,5 @@
 import 'package:code_along/base/bottom_nav_bar.dart';
-import 'package:code_along/screens/all_tickets.dart';
+import 'package:code_along/screens/home/all_tickets.dart';
 import 'package:flutter/material.dart';
 void main() {
   
@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       
       routes: {
         "/": (context)=> const BottomNavBar(),
-      "/all_tickets":(context)=>AllTickets()
+      "/all_tickets":(context)=>AllTickets(),
       },
     );
   }

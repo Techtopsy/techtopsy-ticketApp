@@ -1,5 +1,4 @@
 import 'package:code_along/base/res/styles/app_styles.dart';
-
 import 'package:flutter/material.dart';
 
 class AppDoubleText extends StatelessWidget {
@@ -17,7 +16,6 @@ class AppDoubleText extends StatelessWidget {
         Text(bigText, style:AppStyles.headLineStyle2),
         InkWell(
           onTap: func,
-           
           child: Text(smallText, style:AppStyles.textStyle.copyWith(
             color:AppStyles.primaryColor
           ))

@@ -4,7 +4,7 @@ import 'package:code_along/base/widgets/app_double_text.dart';
 import 'package:code_along/base/res/styles/app_styles.dart';
 import 'package:code_along/base/res/styles/media.dart';
 import 'package:code_along/base/widgets/ticket_view.dart';
-import 'package:code_along/screens/widgets/hotel.dart';
+import 'package:code_along/screens/home/widgets/hotel.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,9 +76,10 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     children: ticketList
                         .map
-                        ((singleTicket) => TicketView(ticket: singleTicket)).toList()
+                        ((singleTicket) => TicketView(ticket: singleTicket)).toList(),
                   ),
                 ),
+                SizedBox(height: 40,),
                 AppDoubleText(
                   bigText: 'Hotels',
                   smallText: 'View all',
@@ -85,7 +87,16 @@ class HomeScreen extends StatelessWidget {
 
                   },
                 ),
-                Hotel(),
+                SizedBox(height: 20,),
+                SingleChildScrollView(child: Row(
+                  children: [
+                  Row(
+                    children:hotelList.take(2)
+                        .map
+                        ((singleHotel) => Hotel(hotel: singleHotel)).toList(),
+                  ),
+                  ],
+                )),
               ],
             ),
           ),

@@ -1,21 +1,19 @@
 import 'package:code_along/base/res/styles/app_styles.dart';
-import 'package:code_along/base/res/styles/media.dart';
 import 'package:flutter/material.dart';
 
 class Hotel extends StatelessWidget {
-  const Hotel({super.key});
+  final Map<String,dynamic> hotel;
+  const Hotel({super.key, required this.hotel});
 
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
-
     return Container(
       padding: EdgeInsets.all(18),
       width: size.width *0.6,
       height: 350,
-      //color: Colors.red.shade200,
+      margin: EdgeInsets.only(right:16),
       decoration: BoxDecoration(
         color: AppStyles.primaryColor,
         borderRadius:BorderRadius.circular(18)
@@ -31,7 +29,7 @@ class Hotel extends StatelessWidget {
         image: DecorationImage(
           fit:BoxFit.cover,
           image: AssetImage(
-            AppMedia.hotelRoom
+            "assets/images/${hotel['image']}"
             )
            )
           ),
@@ -40,7 +38,7 @@ class Hotel extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left:15),
             child: Text(
-              "Open space",
+              hotel["place"],
               style: AppStyles.headLineStyle1.copyWith(color:AppStyles.kakiColor),
             ),
           ),
@@ -48,10 +46,18 @@ class Hotel extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left:15),
             child: Text(
-            "\$25/night",
+            hotel["destination"],
             style:AppStyles.headLineStyle1.copyWith(color:AppStyles.kakiColor),
              ),
-          ) 
+          ),
+          SizedBox(height: 5,),
+          Padding(
+            padding: EdgeInsets.only(left:15),
+            child: Text(
+            "\$${hotel['price']}/night",
+            style:AppStyles.headLineStyle1.copyWith(color:AppStyles.kakiColor),
+             ),
+          ), 
         ],
       )
     );

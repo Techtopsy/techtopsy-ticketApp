@@ -10,6 +10,7 @@ class TextStyleFourth extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      textAlign: align,
       style: AppStyles.headLineStyle4.copyWith(color:Colors.white),
     );
   }
