@@ -1,15 +1,17 @@
+import 'package:code_along/base/res/styles/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class BigDot extends StatelessWidget {
-  const BigDot({super.key});
+  final bool? isColor;
+  const BigDot({super.key, this.isColor});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(3),
       decoration: BoxDecoration(
-        border: Border.all(width:2.5, color: Colors.white),
-        borderRadius: BorderRadius.circular(10),
+        border: Border.all(width:2.5, color: isColor==null? Colors.white:AppStyles.planeColor,),
+        borderRadius: BorderRadius.circular(20),
       ),
     );
   }
