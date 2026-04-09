@@ -125,13 +125,13 @@ class TicketView extends StatelessWidget {
                         alignment: CrossAxisAlignment.start,
                       ),
                       AppColumnTextLayout(
-                        topText: ticket["depature_time"],
-                        bottomText: "departure time",
+                        topText: ticket["departure_time"],
+                        bottomText: "Departure time",
                         alignment: CrossAxisAlignment.center,
                       ),
                       AppColumnTextLayout(
                         topText: ticket["number"].toString(),
-                        bottomText: "number",
+                        bottomText: "Number",
                         alignment: CrossAxisAlignment.end,
                       ),
                     ],
