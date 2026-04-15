@@ -5,7 +5,7 @@ import 'package:code_along/base/utils/app_json.dart';
 import 'package:code_along/base/widgets/app_column_text_layout.dart';
 import 'package:code_along/base/widgets/app_layout_builder_widget.dart';
 import 'package:code_along/base/widgets/ticket_view.dart';
-import 'package:code_along/screens/search/widget/app_ticket_tabs.dart';
+import 'package:code_along/screens/search/widgets/app_ticket_tabs.dart';
 import 'package:code_along/screens/ticket/widgets/ticket_positioned_circle.dart';
 import 'package:flutter/material.dart';
 
@@ -17,15 +17,17 @@ class TicketScreen extends StatefulWidget {
 }
 
 class _TicketScreenState extends State<TicketScreen> {
+  
   late int ticketIndex = 0;
 
 @override
 void didChangeDependencies() {
+  if(ModalRoute.of(context)!.settings.arguments!=null){
   var args = ModalRoute.of(context)!.settings.arguments as Map;
   ticketIndex = args["index"];
+  }
   super.didChangeDependencies();
 }
-  
 
 @override
 Widget build(BuildContext context) {   
@@ -40,9 +42,7 @@ Widget build(BuildContext context) {
       ListView(
         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 0),
         children: [
-          //SizedBox(height: 40,),
-          //Text("Tickets", style: AppStyles.headLineStyle1),
-         // SizedBox( height: 20,),
+          //SizedBox(height: 20,),
           AppTicketTabs(
             firstTab: "Upcoming",
             secondTab:"Previous",
@@ -110,6 +110,7 @@ Widget build(BuildContext context) {
                                   Text("*** 2462", style: AppStyles.headLineStyle3,)
                                 ],
                               ),
+                              SizedBox(height: 5,),
                             Text("Payment method", style: AppStyles.headLineStyle4,),
                             ],
                           ),
@@ -167,8 +168,8 @@ Widget build(BuildContext context) {
       ),
       TicketPositionedCircle(pos: true),
       TicketPositionedCircle(pos: null),
-      ]
-     ),
-    );
+     ]
+    ),  
+   );
   }
 }

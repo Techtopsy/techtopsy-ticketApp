@@ -1,10 +1,10 @@
 import 'package:code_along/base/res/styles/app_styles.dart';
 import 'package:code_along/base/utils/app_routes.dart';
 import 'package:code_along/base/widgets/app_double_text.dart';
-import 'package:code_along/screens/search/widget/app_text_icon.dart';
-import 'package:code_along/screens/search/widget/app_ticket_tabs.dart';
-import 'package:code_along/screens/search/widget/find_tickets.dart';
-import 'package:code_along/screens/search/widget/ticket_promotion.dart';
+import 'package:code_along/screens/search/widgets/app_text_icon.dart';
+import 'package:code_along/screens/search/widgets/app_ticket_tabs.dart';
+import 'package:code_along/screens/search/widgets/find_tickets.dart';
+import 'package:code_along/screens/search/widgets/ticket_promotion.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatelessWidget {

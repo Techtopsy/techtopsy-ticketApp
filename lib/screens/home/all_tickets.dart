@@ -21,7 +21,8 @@ class AllTickets extends StatelessWidget {
               GestureDetector(
                 onTap: (){
                   var index = ticketList.indexOf(singleTicket);
-                  Navigator.pushNamed(context, AppRoutes.ticketScreen,arguments: {"index: index"});
+                
+                  Navigator.pushNamed(context, AppRoutes.ticketScreen,arguments: {"index": index});
                 },
                 child: Container(
                   margin: EdgeInsets.only(bottom:20),

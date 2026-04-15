@@ -19,7 +19,7 @@ class TicketPositionedCircle extends StatelessWidget {
         ),
         child: CircleAvatar(
           maxRadius: 4,
-          backgroundColor: AppStyles.bgColor,
+          backgroundColor: AppStyles.textColor,
         ),
        ));
   }
