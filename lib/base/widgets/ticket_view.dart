@@ -143,7 +143,7 @@ class TicketView extends StatelessWidget {
                       ),
                       AppColumnTextLayout(
                         topText: ticket["number"].toString(),
-                        bottomText: "Number",
+                        bottomText: "number",
                         alignment: CrossAxisAlignment.end,
                         isColor: isColor,
                       ),
