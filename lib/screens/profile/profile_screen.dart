@@ -119,6 +119,7 @@ class ProfileScreen extends StatelessWidget {
                         size:27,
                       ),
                     ),
+                    SizedBox(width: 12),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -150,6 +151,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 25,),
           Text(
             "Accumulated miles",
             style: AppStyles.headLineStyle2,),
@@ -159,13 +161,11 @@ class ProfileScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(18),
               color: AppStyles.bgColor
             ),
-            child: Column(
+          child: Column(
               children: [
                 SizedBox(height: 15,),
-                Text("192802", style:
-                TextStyle(fontSize: 45,
-                color: AppStyles.textColor,
-                fontWeight:FontWeight.w600
+                Text("192802", style:TextStyle(
+                fontSize: 45, color: AppStyles.textColor, fontWeight:FontWeight.w600
                 )),
                 SizedBox(height: 15,),
                 //Row --> text
@@ -191,49 +191,51 @@ class ProfileScreen extends StatelessWidget {
                   AppColumnTextLayout(topText: "23 402", bottomText: "Miles", alignment: CrossAxisAlignment.start,
                   isColor: false,
                   ),
-                  AppColumnTextLayout(topText: "Airline CO", bottomText: "Received from", alignment: CrossAxisAlignment.start,
+                  AppColumnTextLayout(topText: "McDonald's", bottomText: "Received from", alignment: CrossAxisAlignment.end,
                   isColor: false,
                   ),
-                   SizedBox(height: 4,),
+              ],
+                  ),
+                  SizedBox(height: 4,),
               //divider
               Divider(color: Colors.grey.shade300,),
               SizedBox(height: 4,),
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      AppColumnTextLayout(topText: "24", bottomText: "Miles", alignment: CrossAxisAlignment.end, isColor: false,
-                     ),
-                       AppColumnTextLayout(topText: "McDonald's", bottomText: "Received from", alignment: CrossAxisAlignment.end, isColor: false,
-                          ),
-                         ],
-                       ),
-                        SizedBox(height: 4,),
-              //divider
-              Divider(color: Colors.grey.shade300,),
-              SizedBox(height: 4,),
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                        AppColumnTextLayout(topText: "52 240", bottomText: "Miles", alignment: CrossAxisAlignment.start, isColor: false,
-                         ),
-                        AppColumnTextLayout(topText: "TechTopsy", bottomText: "Received from", alignment: CrossAxisAlignment.end, isColor: false,
-                        ),
-                      ],
-                    ),
-                    SizedBox(height:25),
-                  InkWell(
-                    onTap:() {
-                      
-                    },
-                    child: Text(
-                      "How to get more miles",
-                      style: AppStyles.textStyle.copyWith(color:AppStyles.primaryColor,
-                      fontWeight: FontWeight.w500,
-                     ),
-                    ),
-                  ) 
+                //row-> column
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                 AppColumnTextLayout(topText: "Airline CO", bottomText: "Received from", alignment: CrossAxisAlignment.start, isColor: false,
+                 ),
+                 AppColumnTextLayout(topText: "24", bottomText: "Miles", alignment: CrossAxisAlignment.end, isColor: false,
+                 ), 
                 ],
-               )
+              ),
+              SizedBox(height: 4,),
+              //divider
+              Divider(color: Colors.grey.shade300,),
+              SizedBox(height: 4,),
+              //row->column
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppColumnTextLayout(topText: "52 240", bottomText: "Miles", alignment: CrossAxisAlignment.start, isColor: false,
+                 ),
+                 AppColumnTextLayout(topText: "Techtopsy", bottomText: "Received from", alignment: CrossAxisAlignment.end, isColor: false,
+                 ),
+                ],
+              ),
+              SizedBox(height: 25),
+              //text
+              InkWell(
+                onTap:(){
+
+                },
+                child: Text(
+                  "How to get more miles",
+                  style: AppStyles.textStyle.copyWith(color: AppStyles.primaryColor,
+                  fontWeight: FontWeight.w500),
+                ),
+              )
               ],
             ),
           )

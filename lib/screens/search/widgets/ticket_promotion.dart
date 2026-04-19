@@ -34,7 +34,7 @@ class TicketPromotion extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage(AppMedia.planeSit))
+                        image: AssetImage(AppMedia.planeSeat))
                     ),
                   ),
                   Text(

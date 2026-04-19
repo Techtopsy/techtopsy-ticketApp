@@ -16,7 +16,8 @@ class _HotelDetailState extends State<HotelDetail> {
   @override
   void didChangeDependencies() {
     var args =ModalRoute.of(context)!.settings.arguments as Map;
-    print(args["index"]);
+    index = args["index"];
+    // print(args["index"]);
     super.didChangeDependencies();
   }
 
